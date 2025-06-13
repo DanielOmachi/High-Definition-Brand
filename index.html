@@ -34,10 +34,19 @@
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Phone: 08079219371, 07071512223</p>
-    <p>Email: <a href="mailto:vhighdefinitiongraphics@gmail.com">vhighdefinitiongraphics@gmail.com</a></p>
-  </section>
+  <h2>Contact Us</h2>
+  <form name="contact-form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact-form" />
+    <p class="hidden">
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <textarea name="message" placeholder="Your message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
 
  
 </body>
@@ -65,11 +74,18 @@
     </form>
   </div>
 
-  <div class="comments">
-    <h3>Client Feedback</h3>
-    <textarea placeholder="Leave a comment or testimonial..."></textarea>
+ <section id="comments">
+  <h2>Client Feedback</h2>
+  <form name="comments" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="comments" />
+    <p class="hidden">
+      <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+    </p>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <textarea name="comment" placeholder="Your Comment or Testimonial..." required></textarea>
     <button type="submit">Post Comment</button>
-  </div>
+  </form>
+</section>
 </section>
 <section id="daily-uploads">
   <h2>Daily Uploads</h2>
@@ -84,6 +100,48 @@
     </div>
     <!-- Add more image/video blocks here -->
   </div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      text-align: center;
+      padding: 60px 20px;
+      color: #333;
+    }
+    h1 {
+      color: #d50000;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: #d50000;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    a:hover {
+      background: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You!</h1>
+  <p>We’ve received your message and will get back to you soon.</p>
+  <a href="index.html">Return to Home</a>
+</body>
+</html>
+<form ... action="/thank-you.html">
 </section>
  <footer>
     <p>© 2025 High Definition Graphics. All rights reserved.</p>
